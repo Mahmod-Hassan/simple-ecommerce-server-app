@@ -7,6 +7,7 @@ const port = 4000 || 7000;
 // import routing file
 const productRouter = require('./routes/product.route');
 const authRouter = require('./routes/auth.route');
+const cartRouter = require('./routes/cart.route');
 // express app initialization
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.json());
 // telling express use these router file
 app.use(productRouter);
 app.use(authRouter);
+app.use(cartRouter);
 
 // mongodb uri
 let uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.lcblope.mongodb.net/mobiles?retryWrites=true&w=majority`
