@@ -22,7 +22,7 @@ router.post('/signup', async (req, res) => {
         }
         
     } catch (error) {
-        console.log(error);
+
         res.status(401).send({message: 'authentication failed'})
     }
 })
@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
             return res.send({message: 'user not found'})
         }
     } catch (error) {
-        console.log(error);
+
         res.status(401).send({message: 'authentication failed line 77'})
     }
 })
